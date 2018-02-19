@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Personal informations</legend>      
+      <label for="name">Your name:</label>
+      <input type="text" name="name" id="name" placeholder="Enter you name" title="Enter you name" required/>
+
+      <label for="email">Your email:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" title="Enter your email" required />
+
+      <label for="age">Your age:</label>
+      <input type="number" name="age" id="age" placeholder="Your age" title="Your age" required />
+    </fieldset>
+    <fieldset>
+      <legend>About FreeCodeCamp</legend>
+      <label for="role">Which option best describes your current role?</label>
+      <select name="role" id="role" title="Please choose your current role!" required>
+        <option value="student">student</option>
+        <option value="worker">full time job</option>
+        <option value="intensive">full time learner</option>
+        <option value="no_information">prefer no to tell</option>
+        <option value="other">other</option>
+      </select>
+
+      <fieldset>
+        <legend>Recommendation</legend>
+
+        <label>How likely is that you would recommend freeCodeCampt to a friend</label>
+        <label for="definitely">Definitely</label>
+        <input type="radio" name="recommendation" id="definitely" value="definitely" required checked/>
+  
+        <label for="maybe">Maybe</label>
+        <input type="radio" name="recommendation" id="maybe" value="maybe" required />
+  
+        <label for="not_sure">Not sure</label>
+        <input type="radio" name="recommendation" id="not_sure" value="not_sure" required />
+      </fieldset>
+
+      <label for="like">What do you like most in FCC?</label>
+      <select name="like" id="like" title="Please choose an option!" required>
+        <option value="">Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="open source">Open source</option>
+      </select>
+
+      <fieldset>
+        <legend>Improve</legend>
+        <label>Things that should be improved in the future (Check all that apply)</label>
+
+        <input type="checkbox" name="improve[]" id="frontend" value="frontend" />
+        <label for="frontend">Front-end Projects</label>
+
+        <input type="checkbox" name="improve[]" id="backend" value="backend" />
+        <label for="backend">Back-end Projects</label>
+
+        <input type="checkbox" name="improve[]" id="datavisualisation" value="datavisualisation" />
+        <label for="datavisualisation">Data Visualization</label>
+
+        <input type="checkbox" name="improve[]" id="challenges" value="challenges" />
+        <label for="challenges">Challenges</label>
+
+        <input type="checkbox" name="improve[]" id="opensource" value="opensource" />
+        <label for="opensource">Open Source Community</label>
+
+        <input type="checkbox" name="improve[]" id="gitter" value="gitter" />
+        <label for="gitter">Gitter help rooms</label>
+
+        <input type="checkbox" name="improve[]" id="videos" value="videos" />
+        <label for="videos">Videos</label>
+
+        <input type="checkbox" name="improve[]" id="citymeetups" value="citymeetups" />
+        <label for="citymeetups">City Meetups</label>
+
+        <input type="checkbox" name="improve[]" id="wiki" value="wiki" />
+        <label for="wiki">Wiki</label>
+
+        <input type="checkbox" name="improve[]" id="forum" value="forum" />
+        <label for="forum">Forum</label>
+
+        <input type="checkbox" name="improve[]" id="othercourses" value="othercourses" />
+        <label for="othercourses">Additional Courses</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Suggestions</legend>
+        <label for="suggestion">Any Comments or Suggestions?</label>
+        <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</body>
+</html>
