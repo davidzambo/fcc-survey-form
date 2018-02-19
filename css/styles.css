@@ -146,6 +146,10 @@
  }
 
  @media screen and (min-width: 568px) {
+    html,
+    body{
+      font-size: 120%;
+    }
      main {
          padding: 2rem 2rem;
          margin: 2rem 2rem;
