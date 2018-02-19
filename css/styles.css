@@ -1,0 +1,176 @@
+ @import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     background-color: #ff9900;
+     font-size: 100%;
+ }
+
+ html,
+ body,
+ div,
+ section,
+ input,
+ select,
+ img,
+ a,
+ footer {
+     margin: 0;
+     padding: 0;
+ }
+
+ label {
+     line-height: 1.5rem;
+     padding-top: 5px;
+ }
+
+ * {
+     box-sizing: border-box;
+     font-family: 'Love Ya Like A Sister', cursive;
+ }
+
+ .text-center {
+     text-align: center;
+ }
+
+ main {
+     background-color: #EFEFEF;
+     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.49), 0 6px 6px rgba(0, 0, 0, 0.53);
+ }
+
+ h2 {
+     padding-top: 1rem;
+ }
+
+ fieldset {
+     border: 1px solid #CCC;
+     border-radius: 5px;
+     margin: 0.25rem 0.125rem;
+ }
+
+ .question {
+     width: 100%;
+     text-align: left;
+     display: inline-block;
+     padding-right: 0.25rem;
+ }
+
+ .question+.answer {
+     display: inline-block;
+     width: 100%;
+ }
+
+ .answer {
+     width: 45%;
+     height: 1rem;
+     margin: 0.25rem 0;
+ }
+
+ .choices {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .align-top {
+     vertical-align: top;
+ }
+
+ input[type="radio"],
+ input[type="checkbox"] {
+     margin: 6px 3px;
+     font-size: 10px;
+ }
+
+ input[type="radio"]+label,
+ input[type="checkbox"]+label {
+     line-height: 2rem;
+     vertical-align: baseline;
+ }
+
+ .select {
+     padding-top: 2px;
+     padding-bottom: 2px;
+     margin: 0;
+     height: 30px;
+ }
+
+ .textarea {
+     resize: none;
+     width: 100%;
+     height: 100px;
+     padding: 0.25rem;
+ }
+
+ .submit-container {
+     display: flex;
+     justify-content: center;
+     margin: 1rem auto 0;
+ }
+
+ .submit {
+     width: 100%;
+     background-color: #0066ff;
+     padding: 1rem 2rem;
+     border-radius: 5px;
+     color: white;
+     cursor: pointer;
+     font-size: 1.1rem;
+     margin: 1rem 0.25rem;
+     transition: all 0.25s;
+     outline: none;
+     border: none;
+ }
+
+ .submit:hover {
+     background-color: #0055ff;
+     transition: all 0.25s;
+ }
+
+ footer {
+     display: flex;
+     justify-content: center;
+     font-size: 0.8rem;
+     background-color: #111;
+     color: #CCC;
+     padding: 0.8rem;
+     margin: 0;
+ }
+
+ footer img {
+     height: 0.9rem;
+     margin: 0;
+     padding: 0;
+     vertical-align: text-top;
+ }
+
+ @media screen and (min-width: 568px) {
+     main {
+         padding: 2rem 2rem;
+         margin: 2rem 2rem;
+         border-radius: 10px;
+     }
+     h1 {
+       padding-top: 1rem;
+     }
+     h2 {
+         padding-top: 0;
+     }
+     .question {
+         width: 49%;
+         text-align: right;
+     }
+     .question+.answer {
+         width: 49%;
+         max-width: 300px;
+     }
+     .textarea{
+       min-width: 49%;
+     }
+     .submit {
+         width: 200px;
+         text-align: center;
+         margin: auto;
+     }
+ }

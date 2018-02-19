@@ -4,101 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- FACEBOOK SHARING METATAGS -->
+  <meta property="og:url" content="https://www.dcmf.hu/freecodecamp/survey-form" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Survey Form" />
+  <meta property="og:description" content="A freeCodeCamp responsive design project"/>
+  <meta property="og:image" content="https://www.dcmf.hu/freecodecamp/survey-form/images/survey-form.png" />
+  <meta property="og:image:width" content="1406" />
+  <meta property="og:image:height" content="937" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://www.dcmf.hu/favicon.jpg" type="image/x-icon" />
+
   <title>Survey Form</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <form action="">
-    <fieldset>
-      <legend>Personal informations</legend>      
-      <label for="name">Your name:</label>
-      <input type="text" name="name" id="name" placeholder="Enter you name" title="Enter you name" required/>
+  <header>
+    <h1 class="text-center">Survey Form</h1>
+  </header>
+  <main>
+    <form action="">
+      <h2 class="text-center">Let us know how we can improve freeCodeCamp</h2>
+      <fieldset>
+        <legend>Personal informations</legend>
 
-      <label for="email">Your email:</label>
-      <input type="email" name="email" id="email" placeholder="Enter your email" title="Enter your email" required />
+        <label for="name" class="question">Your name:</label>
+        <input type="text" name="name" id="name" class="answer" placeholder="Enter you name" title="Enter you name" required/>
+  
+        <label for="email" class="question">Your email:</label>
+        <input type="email" name="email" id="email" class="answer" placeholder="Enter your email" title="Enter your email" required />
+  
+        <label for="age" class="question">Your age:</label>
+        <input type="number" name="age" id="age" class="answer" placeholder="Your age" title="Your age" required />
+      </fieldset>
 
-      <label for="age">Your age:</label>
-      <input type="number" name="age" id="age" placeholder="Your age" title="Your age" required />
-    </fieldset>
-    <fieldset>
-      <legend>About FreeCodeCamp</legend>
-      <label for="role">Which option best describes your current role?</label>
-      <select name="role" id="role" title="Please choose your current role!" required>
-        <option value="student">student</option>
-        <option value="worker">full time job</option>
-        <option value="intensive">full time learner</option>
-        <option value="no_information">prefer no to tell</option>
-        <option value="other">other</option>
-      </select>
+      <fieldset>
+        <legend>Your role</legend>
+        <label for="role" class="question">Which option best describes your current role?</label>
+        <select name="role" id="role" class="answer align-top select" title="Please choose your current role!" required>
+          <option value="student">student</option>
+          <option value="worker">full time job</option>
+          <option value="intensive">full time learner</option>
+          <option value="no_information">prefer no to tell</option>
+          <option value="other">other</option>
+        </select>
+      </fieldset>
 
       <fieldset>
         <legend>Recommendation</legend>
 
-        <label>How likely is that you would recommend freeCodeCampt to a friend</label>
-        <label for="definitely">Definitely</label>
-        <input type="radio" name="recommendation" id="definitely" value="definitely" required checked/>
-  
-        <label for="maybe">Maybe</label>
-        <input type="radio" name="recommendation" id="maybe" value="maybe" required />
-  
-        <label for="not_sure">Not sure</label>
-        <input type="radio" name="recommendation" id="not_sure" value="not_sure" required />
+        <label class="question align-top">How likely is that you would recommend freeCodeCampt to a friend?</label>
+        
+        <section class="answer choices">
+          <div>
+            <input type="radio" name="recommendation" id="definitely" value="definitely" required checked/>
+            <label for="definitely">Definitely</label>
+          </div>
+          <div>
+            <input type="radio" name="recommendation" id="maybe" value="maybe" required />
+            <label for="maybe">Maybe</label>
+          </div>
+          <div>
+            <input type="radio" name="recommendation" id="not_sure" value="not_sure" required />
+            <label for="not_sure">Not sure</label>
+          </div>
+        </section>
       </fieldset>
 
-      <label for="like">What do you like most in FCC?</label>
-      <select name="like" id="like" title="Please choose an option!" required>
-        <option value="">Select an option</option>
-        <option value="challenges">Challenges</option>
-        <option value="projects">Projects</option>
-        <option value="community">Community</option>
-        <option value="open source">Open source</option>
-      </select>
+      <fieldset>
+        <legend>Advantages</legend>
+        <label for="like" class="question">What do you like most in FCC?</label>
+        <select name="like" id="like" class="answer align-top select" title="Please choose an option!" required>
+          <option value="">Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="open source">Open source</option>
+        </select>
+      </fieldset>
 
       <fieldset>
         <legend>Improve</legend>
-        <label>Things that should be improved in the future (Check all that apply)</label>
+        <label class="question align-top">Things that should be improved in the future: <br/><small>(Check all that apply)</small></label>
+        <section class="answer choises">
+          <div>
+            <input type="checkbox" name="improve[]" id="frontend" value="frontend" />
+            <label for="frontend">Front-end Projects</label>
+          </div>
 
-        <input type="checkbox" name="improve[]" id="frontend" value="frontend" />
-        <label for="frontend">Front-end Projects</label>
+          <div>
+            <input type="checkbox" name="improve[]" id="backend" value="backend" />
+            <label for="backend">Back-end Projects</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="datavisualisation" value="datavisualisation" />
+            <label for="datavisualisation">Data Visualization</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="challenges" value="challenges" />
+            <label for="challenges">Challenges</label>
+          </div>
 
-        <input type="checkbox" name="improve[]" id="backend" value="backend" />
-        <label for="backend">Back-end Projects</label>
-
-        <input type="checkbox" name="improve[]" id="datavisualisation" value="datavisualisation" />
-        <label for="datavisualisation">Data Visualization</label>
-
-        <input type="checkbox" name="improve[]" id="challenges" value="challenges" />
-        <label for="challenges">Challenges</label>
-
-        <input type="checkbox" name="improve[]" id="opensource" value="opensource" />
-        <label for="opensource">Open Source Community</label>
-
-        <input type="checkbox" name="improve[]" id="gitter" value="gitter" />
-        <label for="gitter">Gitter help rooms</label>
-
-        <input type="checkbox" name="improve[]" id="videos" value="videos" />
-        <label for="videos">Videos</label>
-
-        <input type="checkbox" name="improve[]" id="citymeetups" value="citymeetups" />
-        <label for="citymeetups">City Meetups</label>
-
-        <input type="checkbox" name="improve[]" id="wiki" value="wiki" />
-        <label for="wiki">Wiki</label>
-
-        <input type="checkbox" name="improve[]" id="forum" value="forum" />
-        <label for="forum">Forum</label>
-
-        <input type="checkbox" name="improve[]" id="othercourses" value="othercourses" />
-        <label for="othercourses">Additional Courses</label>
+          <div>
+            <input type="checkbox" name="improve[]" id="opensource" value="opensource" />
+            <label for="opensource">Open Source Community</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="gitter" value="gitter" />
+            <label for="gitter">Gitter help rooms</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="videos" value="videos" />
+            <label for="videos">Videos</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="citymeetups" value="citymeetups" />
+            <label for="citymeetups">City Meetups</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="wiki" value="wiki" />
+            <label for="wiki">Wiki</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="forum" value="forum" />
+            <label for="forum">Forum</label>
+          </div>
+  
+          <div>
+            <input type="checkbox" name="improve[]" id="othercourses" value="othercourses" />
+            <label for="othercourses">Additional Courses</label>
+          </div>
+        </section>
       </fieldset>
 
       <fieldset>
         <legend>Suggestions</legend>
-        <label for="suggestion">Any Comments or Suggestions?</label>
-        <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+        <label for="suggestion" class="question">Any Comments or Suggestions?</label>
+        <textarea name="suggestions" id="suggestions" class="answer align-top textarea" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
       </fieldset>
 
-      <button type="submit">Submit</button>
-    </fieldset>
-  </form>
+      <div class="submit-container">
+        <button type="submit" class="submit">Submit</button>
+      </div>
+    
+    </form>
+  </main>
+
+  <footer>
+    <div>codedBy<a href="https://www.dcmf.hu" target="_blank"><img src="https://www.dcmf.hu/images/dcmf-letters.png" alt="David's Code ManuFactory logo" /></a>
+    </div>
+  </footer>
+<script>
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)  
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-105430750-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
